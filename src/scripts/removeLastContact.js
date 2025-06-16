@@ -7,6 +7,7 @@ export const removeLastContact = async () => {
     if (contacts.length > 0) {
       contacts.pop();
       await writeContacts(contacts);
+      console.log("Last contact is deleted");
     } else {
       throw new Error('Contacts list is empty, nothing to remove.');
     }
